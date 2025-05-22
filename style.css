@@ -109,6 +109,27 @@ a:hover {
     background-color: #0056b3;
 }
 
+.card {
+  /* 既存のコードのあとに追加でOK！ */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card .btn {
+  /* 既存のコードに追加 or 上書き */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card .btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
 section ul {
   list-style: none;
   padding: 0;
