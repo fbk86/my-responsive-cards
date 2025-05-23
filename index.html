@@ -60,20 +60,22 @@
             <p>このサイトは育児とWeb制作の両立をテーマに、学習の成果と活動をまとめたポートフォリオです。</p>
             <small>&copy; 2025 ふぶき</small>
         </footer>
+
+        <script>
+            const button = document.getElementById("toggle-btn");
+            const text = document.getElementById("hidden-text");
+
+            button.addEventListener("click", () => {
+                if (text.style.display === "none") {
+                text.style.display = "block";
+                button.textContent = "閉じる";
+                } else {
+                text.style.display = "none";
+                button.textContent = "もっと見る";
+                }
+            });
+        </script>
     </body>
-</html>
 
-<script>
-  const button = document.getElementById("toggle-btn");
-  const text = document.getElementById("hidden-text");
+ </html>
 
-  button.addEventListener("click", () => {
-    if (text.style.display === "none") {
-      text.style.display = "block";
-      button.textContent = "閉じる";
-    } else {
-      text.style.display = "none";
-      button.textContent = "もっと見る";
-    }
-  });
-</script>
