@@ -183,3 +183,26 @@ body {
 .card {
   background-color: #fff;
 }
+
+@media screen and (max-width: 600px) {
+  .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+.video-container {
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.video-container iframe {
+  height: 100%;
+}
