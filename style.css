@@ -199,10 +199,4 @@ body {
   }
 }
 
-.video-container {
-  padding-top: 56.25%; /* 16:9 */
-}
 
-.video-container iframe {
-  height: 100%;
-}
