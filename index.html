@@ -27,6 +27,14 @@
                 <p class="catch">ここは育児をしながら、Web制作に挑戦中しているポートフォリオサイトです。</p>
             </section>
 
+            <section>
+            <h2>育児とWeb制作について</h2>
+            <button id="toggle-btn" class="btn">もっと見る</button>
+            <p id="hidden-text" style="display: none;">
+                育児Vlogを始めたきっかけや、Web制作を学びながら感じたことを書いています。
+            </p>
+            </section>
+
             <section class="cards">
                 <div class="card">
                 <h2>👤 自己紹介</h2>
@@ -54,3 +62,18 @@
         </footer>
     </body>
 </html>
+
+<script>
+  const button = document.getElementById("toggle-btn");
+  const text = document.getElementById("hidden-text");
+
+  button.addEventListener("click", () => {
+    if (text.style.display === "none") {
+      text.style.display = "block";
+      button.textContent = "閉じる";
+    } else {
+      text.style.display = "none";
+      button.textContent = "もっと見る";
+    }
+  });
+</script>
