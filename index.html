@@ -59,12 +59,18 @@
             <section>
             <h2>よくある質問</h2>
                 <div class="accordion">
-                    <button class="accordion-btn">Q. Web制作は未経験でも学べますか？</button>
+                    <button class="accordion-btn">
+                        <span class="icon">＋</span>
+                        Q. Web制作は未経験でも学べますか？
+                    </button>
                     <div class="accordion-content">
                     <p>はい、大丈夫です！実際にこのサイトも未経験から学んで作成しています。</p>
                     </div>
 
-                    <button class="accordion-btn">Q. どのくらい時間がかかりますか？</button>
+                    <button class="accordion-btn">
+                        <span class="icon">＋</span>
+                        Q. どのくらい時間がかかりますか？
+                    </button>
                     <div class="accordion-content">
                     <p>平日30分ずつの学習でも、2ヶ月で成果物を公開できました。</p>
                     </div>
@@ -97,17 +103,18 @@
             const accordionButtons = document.querySelectorAll(".accordion-btn");
 
             accordionButtons.forEach(button => {
-                button.addEventListener("click", () => {
                 const content = button.nextElementSibling;
+                const icon = button.querySelector(".icon");
 
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
+                button.addEventListener("click", () => {
+                const isOpen = content.style.display === "block";
+
+                content.style.display = isOpen ? "none" : "block";
+                icon.textContent = isOpen ? "＋" : "−";
                 });
             });
         </script>
+
 
     </body>
 

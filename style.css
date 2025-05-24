@@ -228,3 +228,18 @@ body {
   background-color: #fafafa;
   border-bottom: 1px solid #ccc;
 }
+
+.accordion-btn {
+  position: relative;
+  padding-left: 36px; /* アイコンぶん余白追加 */
+}
+
+.accordion-btn .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
