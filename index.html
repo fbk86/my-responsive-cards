@@ -7,6 +7,7 @@
     	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="favicon.png">
     </head>
+
     <body>
         <header>
             <h1>私のサイト</h1>
@@ -54,6 +55,22 @@
                 <a href="youtube.html" class="btn">ページを見る</a>
                 </div>
             </section>
+
+            <section>
+            <h2>よくある質問</h2>
+                <div class="accordion">
+                    <button class="accordion-btn">Q. Web制作は未経験でも学べますか？</button>
+                    <div class="accordion-content">
+                    <p>はい、大丈夫です！実際にこのサイトも未経験から学んで作成しています。</p>
+                    </div>
+
+                    <button class="accordion-btn">Q. どのくらい時間がかかりますか？</button>
+                    <div class="accordion-content">
+                    <p>平日30分ずつの学習でも、2ヶ月で成果物を公開できました。</p>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <footer>
@@ -75,6 +92,23 @@
                 }
             });
         </script>
+
+        <script>
+            const accordionButtons = document.querySelectorAll(".accordion-btn");
+
+            accordionButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                const content = button.nextElementSibling;
+
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+                });
+            });
+        </script>
+
     </body>
 
  </html>
